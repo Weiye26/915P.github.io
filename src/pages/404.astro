@@ -2,9 +2,10 @@
 import Page from '../layouts/Page.astro';
 ---
 
-<Page title="页面不存在" description="404">
+<Page title="页面不存在" description="请求的页面不存在，请返回首页或浏览工具与博客。">
+	<meta name="robots" content="noindex" slot="head" />
 	<div class="canvas" style="min-height: 24rem; flex-direction: column; gap: 0.75rem">
-		<p
+		<h1
 			class="mono"
 			style="
 				font-size: 4rem;
@@ -14,7 +15,7 @@ import Page from '../layouts/Page.astro';
 			"
 		>
 			404
-		</p>
+		</h1>
 		<p class="text-xl">这里什么都没有</p>
 		<p class="muted" style="max-width: 24rem; text-align: center">
 			你要找的页面可能已被移动、重命名，或从未存在过。
